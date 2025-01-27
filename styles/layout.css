@@ -1,0 +1,224 @@
+.container {
+  --max-width: 390px;
+  margin-inline: auto;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2);
+
+  & header {
+    .desktop-only {
+      display: none;
+    }
+
+    & .back {
+      height: 16px;
+      margin-top: 78px;
+      margin-bottom: 16px;
+
+      & a {
+        text-decoration: none;
+        font: var(--link);
+        color: var(--color-brand);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+  }
+
+  & main {
+    & .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 44px;
+      margin-bottom: 40px;
+
+      & #input-item {
+        height: 44px;
+        padding-inline: 18px;
+        border-radius: 12px;
+        border: 2px solid var(--border-primary);
+        background-color: var(--background-secondary);
+        font: 400 1rem/1.4 var(--font-family);
+
+        &::placeholder {
+          color: var(--content-tertiary);
+        }
+
+        &:focus-within {
+          outline: var(--color-brand);
+          border-color: var(--color-brand);
+
+          &::placeholder {
+            color: var(--content-primary);
+          }
+        }
+      }
+
+      & button {
+        height: 44px;
+        font: var(--label);
+        color: var(--always-white);
+        background-color: var(--color-brand);
+        border-radius: 12px;
+        border: transparent;
+        cursor: pointer;
+      }
+    }
+
+    & .list {
+      & ul {
+        display: grid;
+        gap: 12px;
+        margin-bottom: 100px;
+
+        & li {
+          background-color: var(--background-secondary);
+          border-radius: 12px;
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          padding: 12px;
+          position: relative;
+
+          & .checkbox-wrapper {
+            position: relative;
+
+            & [type="checkbox"] {
+              all: unset;
+              position: absolute;
+              inset: 0;
+              cursor: pointer;
+            }
+
+            & .checkbox-img {
+              height: 17px;
+              width: 17px;
+              background-image: url(/assets/checkbox.svg);
+            }
+
+            &:hover,
+            &:focus-within .checkbox-img {
+              background-image: url(/assets/checkbox-hover.svg);
+            }
+
+            &:has(:checked) .checkbox-img {
+              background-image: url(/assets/checkbox-selected.svg);
+            }
+          }
+
+          & span {
+            width: 12rem;
+            font: var(--paragraph);
+            color: var(--content-secondary);
+          }
+
+          & .delete-btn {
+            padding: 8px;
+            position: absolute;
+            right: 12px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  & .alert {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 36px;
+    background-color: var(--color-danger);
+    margin-bottom: 170px;
+
+    display: none;
+
+    & label {
+      width: 547px;
+      color: var(--always-white);
+      font: var(--label);
+    }
+
+    .close-alert-btn {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 80em) {
+  .container {
+    --max-width: 90rem;
+    width: 85rem;
+    margin-inline: auto;
+
+    & header {
+      & .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+      }
+
+      & .back {
+        margin: 4rem 0px 1rem 23rem;
+      }
+
+      & h1 {
+        margin-left: 23rem;
+      }
+    }
+
+    & main {
+      margin-inline: 23rem;
+      width: 39rem;
+
+      & .input-wrapper {
+        flex-direction: row;
+
+        & #input-item {
+          width: 28rem;
+          transition: border-color 0.5s ease, outline 0.5s ease;
+
+          &:hover {
+            border: 2px solid var(--border-hover);
+          }
+
+          &:focus-within {
+            outline: var(--color-brand);
+            border-color: var(--color-brand);
+          }
+        }
+
+        & button {
+          width: 10rem;
+          cursor: pointer;
+          transition: background-color 0.5s ease;
+
+          &:hover {
+            background-color: var(--color-brand-hover);
+          }
+        }
+      }
+
+      & .list {
+        & ul {
+          & li {
+            padding-block: 8px;
+            padding-inline: 12px;
+            height: 49px;
+
+            & span {
+              width: 33rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

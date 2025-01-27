@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <title>Lista de Compras</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo desktop-only">
+          <a href="#">
+            <img src="assets/logo.svg" alt="logo quicklist" />
+          </a>
+        </div>
+
+        <div class="back">
+          <a href="#">
+            <img src="assets/arrow-left.svg" alt="Voltar para a página anterior" />
+            <span>Voltar</span>
+          </a>
+        </div>
+
+        <h1>Compras da semana</h1>
+      </header>
+
+      <main>
+        <form method="post">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="input-item"
+              id="input-item"
+              placeholder="Adicione um novo item"
+            />
+            <button type="button" id="add-item-btn">Adicionar item</button>
+          </div>
+
+          <div class="list">
+            <ul role="list" id="item-list">
+              <li>
+                <div class="checkbox-wrapper">
+                  <label for="item-1">
+                    <div class="checkbox-img"></div>
+                    <input type="checkbox" name="item-1" id="item-1" />
+                  </label>
+                </div>
+                <span>Pão de forma</span>
+                <img
+                  class="delete-btn"
+                  src="assets/trash-can.svg"
+                  alt="Ícone de lixeira"
+                  aria-label="Excluir item"
+                />
+              </li>
+
+              <li>
+                <div class="checkbox-wrapper">
+                  <label for="item-2">
+                    <div class="checkbox-img"></div>
+                    <input type="checkbox" name="item-2" id="item-2" />
+                  </label>
+                </div>
+                <span>Café preto</span>
+                <img
+                  class="delete-btn"
+                  src="assets/trash-can.svg"
+                  alt="Ícone de lixeira"
+                  aria-label="Excluir item"
+                />
+              </li>
+
+              <li>
+                <div class="checkbox-wrapper">
+                  <label for="item-3">
+                    <div class="checkbox-img"></div>
+                    <input type="checkbox" name="item-3" id="item-3" />
+                  </label>
+                </div>
+                <span>Suco de laranja</span>
+                <img
+                  class="delete-btn"
+                  src="assets/trash-can.svg"
+                  alt="Ícone de lixeira"
+                  aria-label="Excluir item"
+                />
+              </li>
+
+              <li>
+                <div class="checkbox-wrapper">
+                  <label for="item-4">
+                    <div class="checkbox-img"></div>
+                    <input type="checkbox" name="item-4" id="item-4" />
+                  </label>
+                </div>
+                <span>Bolacha</span>
+                <img
+                  class="delete-btn"
+                  src="assets/trash-can.svg"
+                  alt="Ícone de lixeira"
+                  aria-label="Excluir item"
+                />
+              </li>
+            </ul>
+          </div>
+
+          <div class="alert">
+            <img src="assets/warning-circle-filled.svg" alt="ícone de alerta" />
+            <label>O item foi removido da lista</label>
+            <img
+              class="close-alert-btn"
+              src="assets/delete-small.svg"
+              alt="Alerta: item removido da lista"
+            />
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
