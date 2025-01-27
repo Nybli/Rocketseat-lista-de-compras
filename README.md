@@ -1,4 +1,4 @@
-<h1 align="center">quicklist</h1>
+<h1 align="center"><img src="./assets/logo.svg"></h1>
 
 <p align="center">
 Programa exclusivo promovido pela Rocketseat para ensino de tecnologias WEB.
@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O projeto "quicklist" é um site responsivo de lista de compras onde o usuário pode gerenciar os itens adicionando e removendo eles. 
+O projeto "quicklist" é um site responsivo de lista de compras onde o usuário pode gerenciar os itens adicionando e removendo eles.
 
 Esse é um dos desafio da formação Full-Stack, um dos conteúdos disponíveis para alunos da Rocketseat.
 
