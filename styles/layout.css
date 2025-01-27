@@ -98,16 +98,16 @@
             & .checkbox-img {
               height: 17px;
               width: 17px;
-              background-image: url(/assets/checkbox.svg);
+              background-image: url(../assets/checkbox.svg);
             }
 
             &:hover,
             &:focus-within .checkbox-img {
-              background-image: url(/assets/checkbox-hover.svg);
+              background-image: url(../assets/checkbox-hover.svg);
             }
 
             &:has(:checked) .checkbox-img {
-              background-image: url(/assets/checkbox-selected.svg);
+              background-image: url(../assets/checkbox-selected.svg);
             }
           }
 
